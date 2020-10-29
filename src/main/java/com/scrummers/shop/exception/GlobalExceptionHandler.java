@@ -1,6 +1,5 @@
 package com.scrummers.shop.exception;
 
-import com.scrummers.shop.exception.error.Error;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -8,6 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.scrummers.shop.dto.ErrorDTO;
+import com.scrummers.shop.exception.error.Error;
 
 import lombok.extern.java.Log;
 
