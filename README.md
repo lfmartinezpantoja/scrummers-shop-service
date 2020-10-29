@@ -59,7 +59,7 @@ mvn clean install					   //clean, run all tests and build
 
 ## Documentation
 
-* 	[Postman Collection]() - offline
+* 	[Postman Collection](https://github.com/lfmartinezpantoja/scrummers-shop-service/blob/master/scrummers.postman_collection.json) - offline
 * 	[Swagger](http://localhost:8080/swagger-ui.html) - `http://localhost:8080/swagger-ui.html`- Documentation & Testing
 
 
