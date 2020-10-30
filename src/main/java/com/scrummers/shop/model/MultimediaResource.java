@@ -1,8 +1,6 @@
 package com.scrummers.shop.model;
 
 import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -19,31 +16,21 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Table(name = "products")
-public class Product implements Serializable {
+@Table(name = "multimedia_resources")
+public class MultimediaResource implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private String size;
-	private int quantity;
-	private double unitPrice;
-	private Date creationDate;
-	private boolean disable;
+	private String type;
+	private String url;
 	@ManyToOne(optional = false, fetch = FetchType.LAZY)
-	@JoinColumn(name = "FK_SHOP")
-	private Shop shop;
-	@OneToMany
-	private List<MultimediaResource> multimediaResources;
+	@JoinColumn(name = "FK_PRODUCT")
+	private Product product;
 	private static final long serialVersionUID = 1L;
-
-	public Product(Long id) {
-		super();
-		this.id = id;
-	}
 
 }
